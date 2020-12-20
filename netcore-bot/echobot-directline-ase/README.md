@@ -8,19 +8,19 @@ This sample refers [Direct Line App Service Extension protocol](https://docs.mic
 
 1. ### Changing in netcore Project
 
-    ![Insert code in netcore startup.cs](./images/netcore_startup.png "Insert code in netcore startup.cs")  
+    ![Insert code in netcore startup.cs](./Images/netcore_startup.png "Insert code in netcore startup.cs")  
 
 1. ### Changing in Portal
 
     - Enable direct-line channel. Then reval and copy "App Service Extension Keys".
-      ![Change in portal](./images/appServiceExtensionKeys.png "copy extenstion key")  
+      ![Change in portal](./Images/appServiceExtensionKeys.png "copy extenstion key")  
 
     - Open "Configuration" in app sergice settings
       New "DirectLineExtensionKey" under Application Settings and assign "App Service Extension Keys" to value.
-      ![Change in portal](./images/directLineExtensionKey.png "add extenstion key")  
+      ![Change in portal](./Images/directLineExtensionKey.png "add extenstion key")  
 
     - Make sure websockets is on under general settings
-      ![Change in portal](./images/websockets.png "enable websocket")  
+      ![Change in portal](./Images/websockets.png "enable websocket")  
 
 1. ### Test DL-ASE if it's actived
 
@@ -35,8 +35,8 @@ This sample refers [Direct Line App Service Extension protocol](https://docs.mic
 - Received **"HTTP Error 500.34 - ANCM Mixed Hosting"**  
     The cause is bot serivce uses inprocess hosting model. To configure it run as outofprocess model. The [Troubleshooting](https://docs.microsoft.com/en-us/azure/bot-service/bot-service-channel-directline-extension-net-bot?view=azure-bot-service-4.0#troubleshooting) section describes this error and provides a [solution](https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/aspnet-core-module?view=aspnetcore-3.1&preserve-view=true#out-of-process-hosting-model).  
     However, in my test lab, the outofprocess model has to be set in web.config and *.csproj together to fix this error.
-    ![Change in portal](./images/netcore_csproj.png "enable websocket")
-    ![Change in portal](./images/netcore_webconfig.png "enable websocket")
+    ![Change in portal](./Images/netcore_csproj.png "enable websocket")
+    ![Change in portal](./Images/netcore_webconfig.png "enable websocket")
 
 ## How to use DL-ASE in the web page chat
 
