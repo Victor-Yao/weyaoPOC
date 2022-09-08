@@ -1,0 +1,23 @@
+version: "3.9"
+services:
+    app:
+        image: "docker.io/weiyao666/mvcapp_web:latest"
+        container_name: webapp
+        ports:
+            - "8080:80"
+            - "8083:443"
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Production
+            - ASPNETCORE_URLS=https://+:443;http://+:80
+            - ASPNETCORE_Kestrel__Certificates__Default__Password=123
+            - ASPNETCORE_Kestrel__Certificates__Default__Path=/source/cert/aspnetapp.pfx
+        depends_on:
+            - db
+    db:
+        image: "mcr.microsoft.com/mssql/server"
+        container_name: db
+        environment:
+            MSSQL_SA_PASSWORD: "@Passw0rd"
+            ACCEPT_EULA: "Y"
+        ports:
+            - "1433:1433"
