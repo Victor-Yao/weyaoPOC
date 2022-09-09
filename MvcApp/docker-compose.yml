@@ -14,7 +14,7 @@ services:
         depends_on:
             - db
         networks:
-            - net1
+            - myNetwork
     db:
         image: "mcr.microsoft.com/mssql/server"
         container_name: db
@@ -24,6 +24,6 @@ services:
         ports:
             - "1433:1433"
         networks:
-            - net1
+            - myNetwork
 networks:
-    net1:
+    myNetwork:
