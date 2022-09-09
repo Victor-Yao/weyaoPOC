@@ -1,10 +1,8 @@
 #!/bin/bash
 
 set -e
-# run_cmd="dotnet run --server.urls http://*:80"
 run_cmd="dotnet /app/MvcApp.dll"
 
-# opt/mssql-tools/bin/sqlcmd -S localhost -U SA -P @Passw0rd -d master -i SqlCmdScript.sql
 until dotnet ef database update; do
 >&2 echo "SQL Server is starting up"
 sleep 1
