@@ -4,13 +4,13 @@ Asp.Net Core Mvc based Web application with EF and MSSQL. The Docker Image was s
 
 ## Prerequisites
 
-- [.NET SDK](https://dotnet.microsoft.com/download) version 6.0 or above
+- Install [.NET SDK](https://dotnet.microsoft.com/download) version 6.0 or above
 
   ```bash
   # determine dotnet version
   dotnet --version
   ```
-- [Docker](https://docs.docker.com/get-docker/) latest
+- Install [Docker](https://docs.docker.com/get-docker/) latest
 
 ## Build and Run this project on your local machine.
 - Clone the repository
@@ -27,9 +27,10 @@ Asp.Net Core Mvc based Web application with EF and MSSQL. The Docker Image was s
     ```
 
 - Ensure entrypoint.sh is using Unix EOL, LF. 
+
 ![entrypoint.sh Unix EOL](./Docs/entrypoint-EOL.png)
 
-- Build & start up services
+- Build & start up services from a terminal
 
   ```bash
   # Run as detached and wait to compele
