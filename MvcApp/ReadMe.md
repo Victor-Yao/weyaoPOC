@@ -13,10 +13,10 @@ Asp.Net Core Mvc based Web application with EF and MSSQL. The Docker Image was s
 - Install [Docker](https://docs.docker.com/get-docker/) latest
 
 ## Build and Run this project on your local machine.
-- Clone the repository
+- Clone the repository and navigate to mvcapp directory.
 
     ```bash
-    git clone https://github.com/Microsoft/botbuilder-samples.git
+    git clone https://github.com/Victor-Yao/TechTalkDemo.git
     ```
 
 - Run following two dotnet cmdlets to create a self-signed asp.net certificate from a terminal
