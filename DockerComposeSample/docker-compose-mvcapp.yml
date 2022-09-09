@@ -13,6 +13,8 @@ services:
             - ASPNETCORE_Kestrel__Certificates__Default__Path=/source/cert/aspnetapp.pfx
         depends_on:
             - db
+        networks:
+            - myNetwork
     db:
         image: "mcr.microsoft.com/mssql/server"
         container_name: db
@@ -21,3 +23,7 @@ services:
             ACCEPT_EULA: "Y"
         ports:
             - "1433:1433"
+        networks:
+            - myNetwork
+networks:
+    myNetwork:
