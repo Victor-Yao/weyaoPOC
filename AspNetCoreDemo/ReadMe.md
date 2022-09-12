@@ -17,7 +17,7 @@ By default URL,  http://localhost:8080
 1. Docker CLI
     ```bash
     docker pull weiyao666/aspnetcoredemo
-    docker run -p 8080:80 --name mywebapp aspnetcoredemo
+    docker run -p 8080:80 --name mywebapp weiyao666/aspnetcoredemo
     ```
 1. Docker Compose
 
