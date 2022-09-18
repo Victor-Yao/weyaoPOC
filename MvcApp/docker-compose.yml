@@ -11,6 +11,7 @@ services:
             - ASPNETCORE_URLS=https://+:443;http://+:80
             - ASPNETCORE_Kestrel__Certificates__Default__Password=123
             - ASPNETCORE_Kestrel__Certificates__Default__Path=/source/cert/aspnetapp.pfx
+            - ConnectionStrings__SqlServerContext=Data Source=db;Initial Catalog=master;User=SA;Password=@Passw0rd;
         depends_on:
             - db
         networks:
