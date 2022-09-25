@@ -8,7 +8,7 @@
 - Create a AKS cluster
 
   ```bash
-  az aks create --name yourAksCluster --node-count 2 --generate-ssh-keys --attach-acr yourImagesACR
+  az aks create --name yourAksCluster --node-count 2 --generate-ssh-keys --attach-acr yourImagesACR -g yourRG
   ```
 
 ## Deploy Applicatoin
