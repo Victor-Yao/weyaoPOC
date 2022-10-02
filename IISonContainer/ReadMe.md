@@ -63,3 +63,13 @@ It's a simple tutorial to share how to run IIS on Windows based container, what 
   procdump64 -ma -accepteula <PID>
   ```
 
+## Copy file between host and container
+- Stop container
+- Run docker cp
+  ```bash
+  # container ==> host
+  docker cp my-running-site:Src .\Target
+  
+  # host ==> container
+  docker cp .\Src my-running-site:Target
+  ```
