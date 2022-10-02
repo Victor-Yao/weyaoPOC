@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>Hostname</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        p {
+            font-size: xx-large;
+         }
+
+        #hostname {
+            color: red;
+        }
+    </style>
+</head>
+  
+<body>
+    <p>
+      IIS Container Hostname is:
+    </p>
+    <p id="hostname"></p>
+    <script> 
+        window.onload = () => {
+            document.getElementById("hostname").innerHTML = location.hostname;
+            document.title = location.hostname;
+        }
+    </script>
+</body>
+  
+</html>
