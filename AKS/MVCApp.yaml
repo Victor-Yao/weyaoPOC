@@ -65,7 +65,7 @@ metadata:
   labels:
     app: mssql
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: mssql
