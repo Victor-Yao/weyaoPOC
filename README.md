@@ -1,2 +1,2 @@
 # TechTalkDemo
-Share somes demos of asp.net app host on Linux container and IIS on Windows containuer 
+A tech talk demos repository. Please read the instructions in the readme for each project. 
