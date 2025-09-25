@@ -1,0 +1,106 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mvcapp-deployment
+  labels:
+    app: mvcapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: mvcapp
+  template:
+    metadata:
+      labels:
+        app: mvcapp
+    spec:
+      nodeSelector:
+        "kubernetes.io/os": linux
+      containers:
+        - name: mvcapp
+          image: weyaoimagesacr.azurecr.io/mvcapp
+          ports:
+            - containerPort: 80
+            - containerPort: 443
+          resources:
+            requests:
+              cpu: 250m
+              memory: 250M
+            limits:
+              cpu: 500m
+              memory: 500M
+          env:
+            - name: ASPNETCORE_ENVIRONMENT
+              value: Production
+            - name: ASPNETCORE_URLS
+              value: https://+:443;http://+:80
+            - name: ASPNETCORE_Kestrel__Certificates__Default__Password
+              value: "123"
+            - name: ASPNETCORE_Kestrel__Certificates__Default__Path
+              value: /source/cert/aspnetapp.pfx
+            - name: ConnectionStrings__SqlServerContext
+              value: Data Source=mssql-service;Initial Catalog=master;User=SA;Password=@Passw0rd;
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mvcapp-service
+spec:
+  type: LoadBalancer
+  selector:
+    app: mvcapp
+  ports:
+    - port: 80
+      name: http
+      targetPort: 80
+    - port: 443
+      name: https
+      targetPort: 443
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mssql-deployment
+  labels:
+    app: mssql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mssql
+  template:
+    metadata:
+      labels:
+        app: mssql
+    spec:
+      containers:
+        - name: mssqldb
+          image: mcr.microsoft.com/mssql/server
+          ports:
+            - containerPort: 1433
+          resources:
+            requests:
+              cpu: 250m
+            limits:
+              cpu: 500m
+          env:
+            - name: MSSQL_SA_PASSWORD
+              value: "@Passw0rd"
+            - name: ACCEPT_EULA
+              value: "Y"
+            - name: MSSQL_PID
+              value: "Standard"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mssql-service
+spec:
+  type: ClusterIP
+  selector:
+    app: mssql
+  ports:
+    - protocol: TCP
+      port: 1433
+      targetPort: 1433

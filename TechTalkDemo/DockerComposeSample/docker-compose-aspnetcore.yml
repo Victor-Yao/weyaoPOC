@@ -1,0 +1,8 @@
+services:
+  app:
+    image: weiyao666/aspnetcoredemo
+    container_name: mywebapp
+    ports:
+      - 8080:80
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development

@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+    app:
+        build: .
+        container_name: webapp
+        ports:
+            - 8080:80
+            - 8083:443
+        environment:
+            - ASPNETCORE_ENVIRONMENT=Production
+            - ASPNETCORE_URLS=https://+:443;http://+:80
+            - ASPNETCORE_Kestrel__Certificates__Default__Password=123
+            - ASPNETCORE_Kestrel__Certificates__Default__Path=/source/cert/aspnetapp.pfx
+            - ConnectionStrings__SqlServerContext=Data Source=mssqldb;Initial Catalog=master;User=SA;Password=@Passw0rd;
+        depends_on:
+            - db
+        networks:
+            - myNetwork
+    db:
+        image: mcr.microsoft.com/mssql/server
+        container_name: mssqldb
+        environment:
+            MSSQL_SA_PASSWORD: "@Passw0rd"
+            ACCEPT_EULA: 'Y'
+            MSSQL_PID: Standard
+        networks:
+            - myNetwork
+networks:
+    myNetwork:
