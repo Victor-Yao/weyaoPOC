@@ -1,0 +1,34 @@
+﻿@using _05_EFBasic.Models
+<!--IQueryable<_05_EFBasic.Models.UserInfoViewModel>-->
+@model IQueryable<_05_EFBasic.Models.UserInfo>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        <a href="@Url.Action("Insert", "CURD")">Add</a>
+        <table border="1">
+            <tr>
+                <th>编号</th>
+                <th>姓名</th>
+            </tr>
+            @foreach (var userInfo in Model)
+            {
+                <tr>
+                    <td>@userInfo.ID</td>
+                    <td>@userInfo.UserName</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

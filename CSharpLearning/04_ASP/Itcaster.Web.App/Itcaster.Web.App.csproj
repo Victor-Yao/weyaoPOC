@@ -1,0 +1,835 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{70247091-B380-4961-B479-EECF2BC3CF1D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Itcaster.Web</RootNamespace>
+    <AssemblyName>Itcaster.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="2017_10_01\03_AdminIndex.aspx" />
+    <Content Include="2017_10_01\05_Ajax_Demo.aspx" />
+    <Content Include="2017_10_01\07_Ajax_Post.aspx" />
+    <Content Include="2017_10_01\08_AjaxDemo_Get.aspx" />
+    <Content Include="2017_10_01\09_Ajax_JQuery.aspx" />
+    <Content Include="2017_10_01\Image\login_bg.jpg" />
+    <Content Include="2017_10_01\Image\login_img.jpg" />
+    <Content Include="2017_10_01\Image\login_leftbg.jpg" />
+    <Content Include="2017_10_01\Image\login_line.jpg" />
+    <Content Include="2017_10_01\Image\login_menu2.jpg" />
+    <Content Include="2017_10_01\Image\login_rigbg.jpg" />
+    <Content Include="2017_10_01\Image\login_tit.jpg" />
+    <Content Include="2017_10_01\Image\style.css" />
+    <Content Include="2017_10_01\01_Login.aspx" />
+    <Content Include="2017_10_03\01_AjaxJqueryDemo.aspx" />
+    <Content Include="2017_10_03\03_Register.aspx" />
+    <Content Include="2017_10_03\04_Login.aspx" />
+    <Content Include="2017_10_03\05_JsonDemo.aspx" />
+    <Content Include="2017_10_03\06_UserInfoList.html" />
+    <Content Include="2017_10_05\00_ServerControlDemo.aspx" />
+    <Content Include="2017_10_05\01_Repeater.aspx" />
+    <Content Include="2017_10_05\02_ListView.aspx" />
+    <Content Include="2017_10_06\01_Index.aspx" />
+    <Content Include="2017_10_06\01_MasterIndex.aspx" />
+    <Content Include="2017_10_06\02_CustomCacheDemo.aspx" />
+    <Content Include="2017_10_06\02_DataSrcCache.aspx" />
+    <Content Include="2017_10_06\02_PageCacheDemo.aspx" />
+    <Content Include="2017_10_06\03_FileContent.txt" />
+    <Content Include="2017_10_06\03_FileSystemDependency.aspx" />
+    <Content Include="2017_10_06\04_Error.aspx" />
+    <Content Include="2017_10_06\05_Login.aspx" />
+    <Content Include="2017_10_06\Admin\Index.aspx" />
+    <Content Include="2017_9_18\aspxCRUD\Add.aspx" />
+    <Content Include="2017_9_18\aspxCRUD\Details.aspx" />
+    <Content Include="2017_9_18\aspxCRUD\Edit.aspx" />
+    <Content Include="2017_9_18\aspxCRUD\Index.aspx" />
+    <Content Include="2017_9_18\Download.html" />
+    <Content Include="2017_9_18\FileUpload.html" />
+    <Content Include="2017_9_18\Login.html" />
+    <Content Include="2017_9_24\NewList.aspx" />
+    <Content Include="2017_9_24\Server\Server_Demo.aspx" />
+    <Content Include="2017_9_24\Server\Server_Demo2.aspx" />
+    <Content Include="2017_9_24\ViewState\ViewState_Demo.aspx" />
+    <Content Include="2017_9_24\ViewState\WebForm1.aspx" />
+    <Content Include="2017_9_26\01_CookieDemo_1.aspx" />
+    <Content Include="2017_9_26\01_CookieDemo_2.aspx" />
+    <Content Include="2017_9_26\03_CookieLogin.aspx" />
+    <Content Include="2017_9_26\02_Login.aspx" />
+    <Content Include="2017_9_26\04_Test.aspx" />
+    <Content Include="2017_9_26\Session_Demo.aspx" />
+    <Content Include="css\jquery-ui.css" />
+    <Content Include="css\jquery-ui.min.css" />
+    <Content Include="css\jquery.ui.dialog.css" />
+    <Content Include="css\pageBar.css" />
+    <Content Include="css\tableStyle.css" />
+    <Content Include="css\themes\black\accordion.css" />
+    <Content Include="css\themes\black\calendar.css" />
+    <Content Include="css\themes\black\combo.css" />
+    <Content Include="css\themes\black\combobox.css" />
+    <Content Include="css\themes\black\datagrid.css" />
+    <Content Include="css\themes\black\datebox.css" />
+    <Content Include="css\themes\black\dialog.css" />
+    <Content Include="css\themes\black\easyui.css" />
+    <Content Include="css\themes\black\images\accordion_arrows.png" />
+    <Content Include="css\themes\black\images\blank.gif" />
+    <Content Include="css\themes\black\images\calendar_arrows.png" />
+    <Content Include="css\themes\black\images\combo_arrow.png" />
+    <Content Include="css\themes\black\images\datagrid_icons.png" />
+    <Content Include="css\themes\black\images\datebox_arrow.png" />
+    <Content Include="css\themes\black\images\layout_arrows.png" />
+    <Content Include="css\themes\black\images\linkbutton_bg.png" />
+    <Content Include="css\themes\black\images\loading.gif" />
+    <Content Include="css\themes\black\images\menu_arrows.png" />
+    <Content Include="css\themes\black\images\messager_icons.png" />
+    <Content Include="css\themes\black\images\pagination_icons.png" />
+    <Content Include="css\themes\black\images\panel_tools.png" />
+    <Content Include="css\themes\black\images\searchbox_button.png" />
+    <Content Include="css\themes\black\images\slider_handle.png" />
+    <Content Include="css\themes\black\images\spinner_arrows.png" />
+    <Content Include="css\themes\black\images\tabs_icons.png" />
+    <Content Include="css\themes\black\images\tree_icons.png" />
+    <Content Include="css\themes\black\images\validatebox_warning.png" />
+    <Content Include="css\themes\black\layout.css" />
+    <Content Include="css\themes\black\linkbutton.css" />
+    <Content Include="css\themes\black\menu.css" />
+    <Content Include="css\themes\black\menubutton.css" />
+    <Content Include="css\themes\black\messager.css" />
+    <Content Include="css\themes\black\numberbox.css" />
+    <Content Include="css\themes\black\pagination.css" />
+    <Content Include="css\themes\black\panel.css" />
+    <Content Include="css\themes\black\progressbar.css" />
+    <Content Include="css\themes\black\propertygrid.css" />
+    <Content Include="css\themes\black\searchbox.css" />
+    <Content Include="css\themes\black\slider.css" />
+    <Content Include="css\themes\black\spinner.css" />
+    <Content Include="css\themes\black\splitbutton.css" />
+    <Content Include="css\themes\black\tabs.css" />
+    <Content Include="css\themes\black\textbox.css" />
+    <Content Include="css\themes\black\tooltip.css" />
+    <Content Include="css\themes\black\tree.css" />
+    <Content Include="css\themes\black\validatebox.css" />
+    <Content Include="css\themes\black\window.css" />
+    <Content Include="css\themes\bootstrap\accordion.css" />
+    <Content Include="css\themes\bootstrap\calendar.css" />
+    <Content Include="css\themes\bootstrap\combo.css" />
+    <Content Include="css\themes\bootstrap\combobox.css" />
+    <Content Include="css\themes\bootstrap\datagrid.css" />
+    <Content Include="css\themes\bootstrap\datebox.css" />
+    <Content Include="css\themes\bootstrap\dialog.css" />
+    <Content Include="css\themes\bootstrap\easyui.css" />
+    <Content Include="css\themes\bootstrap\images\accordion_arrows.png" />
+    <Content Include="css\themes\bootstrap\images\blank.gif" />
+    <Content Include="css\themes\bootstrap\images\calendar_arrows.png" />
+    <Content Include="css\themes\bootstrap\images\combo_arrow.png" />
+    <Content Include="css\themes\bootstrap\images\datagrid_icons.png" />
+    <Content Include="css\themes\bootstrap\images\datebox_arrow.png" />
+    <Content Include="css\themes\bootstrap\images\layout_arrows.png" />
+    <Content Include="css\themes\bootstrap\images\linkbutton_bg.png" />
+    <Content Include="css\themes\bootstrap\images\loading.gif" />
+    <Content Include="css\themes\bootstrap\images\menu_arrows.png" />
+    <Content Include="css\themes\bootstrap\images\messager_icons.png" />
+    <Content Include="css\themes\bootstrap\images\pagination_icons.png" />
+    <Content Include="css\themes\bootstrap\images\panel_tools.png" />
+    <Content Include="css\themes\bootstrap\images\searchbox_button.png" />
+    <Content Include="css\themes\bootstrap\images\slider_handle.png" />
+    <Content Include="css\themes\bootstrap\images\spinner_arrows.png" />
+    <Content Include="css\themes\bootstrap\images\tabs_icons.png" />
+    <Content Include="css\themes\bootstrap\images\tree_icons.png" />
+    <Content Include="css\themes\bootstrap\images\validatebox_warning.png" />
+    <Content Include="css\themes\bootstrap\layout.css" />
+    <Content Include="css\themes\bootstrap\linkbutton.css" />
+    <Content Include="css\themes\bootstrap\menu.css" />
+    <Content Include="css\themes\bootstrap\menubutton.css" />
+    <Content Include="css\themes\bootstrap\messager.css" />
+    <Content Include="css\themes\bootstrap\numberbox.css" />
+    <Content Include="css\themes\bootstrap\pagination.css" />
+    <Content Include="css\themes\bootstrap\panel.css" />
+    <Content Include="css\themes\bootstrap\progressbar.css" />
+    <Content Include="css\themes\bootstrap\propertygrid.css" />
+    <Content Include="css\themes\bootstrap\searchbox.css" />
+    <Content Include="css\themes\bootstrap\slider.css" />
+    <Content Include="css\themes\bootstrap\spinner.css" />
+    <Content Include="css\themes\bootstrap\splitbutton.css" />
+    <Content Include="css\themes\bootstrap\tabs.css" />
+    <Content Include="css\themes\bootstrap\textbox.css" />
+    <Content Include="css\themes\bootstrap\tooltip.css" />
+    <Content Include="css\themes\bootstrap\tree.css" />
+    <Content Include="css\themes\bootstrap\validatebox.css" />
+    <Content Include="css\themes\bootstrap\window.css" />
+    <Content Include="css\themes\default\accordion.css" />
+    <Content Include="css\themes\default\calendar.css" />
+    <Content Include="css\themes\default\combo.css" />
+    <Content Include="css\themes\default\combobox.css" />
+    <Content Include="css\themes\default\datagrid.css" />
+    <Content Include="css\themes\default\datebox.css" />
+    <Content Include="css\themes\default\dialog.css" />
+    <Content Include="css\themes\default\easyui.css" />
+    <Content Include="css\themes\default\images\accordion_arrows.png" />
+    <Content Include="css\themes\default\images\blank.gif" />
+    <Content Include="css\themes\default\images\calendar_arrows.png" />
+    <Content Include="css\themes\default\images\combo_arrow.png" />
+    <Content Include="css\themes\default\images\datagrid_icons.png" />
+    <Content Include="css\themes\default\images\datebox_arrow.png" />
+    <Content Include="css\themes\default\images\layout_arrows.png" />
+    <Content Include="css\themes\default\images\linkbutton_bg.png" />
+    <Content Include="css\themes\default\images\loading.gif" />
+    <Content Include="css\themes\default\images\menu_arrows.png" />
+    <Content Include="css\themes\default\images\messager_icons.png" />
+    <Content Include="css\themes\default\images\pagination_icons.png" />
+    <Content Include="css\themes\default\images\panel_tools.png" />
+    <Content Include="css\themes\default\images\searchbox_button.png" />
+    <Content Include="css\themes\default\images\slider_handle.png" />
+    <Content Include="css\themes\default\images\spinner_arrows.png" />
+    <Content Include="css\themes\default\images\tabs_icons.png" />
+    <Content Include="css\themes\default\images\tree_icons.png" />
+    <Content Include="css\themes\default\images\validatebox_warning.png" />
+    <Content Include="css\themes\default\layout.css" />
+    <Content Include="css\themes\default\linkbutton.css" />
+    <Content Include="css\themes\default\menu.css" />
+    <Content Include="css\themes\default\menubutton.css" />
+    <Content Include="css\themes\default\messager.css" />
+    <Content Include="css\themes\default\numberbox.css" />
+    <Content Include="css\themes\default\pagination.css" />
+    <Content Include="css\themes\default\panel.css" />
+    <Content Include="css\themes\default\progressbar.css" />
+    <Content Include="css\themes\default\propertygrid.css" />
+    <Content Include="css\themes\default\searchbox.css" />
+    <Content Include="css\themes\default\slider.css" />
+    <Content Include="css\themes\default\spinner.css" />
+    <Content Include="css\themes\default\splitbutton.css" />
+    <Content Include="css\themes\default\tabs.css" />
+    <Content Include="css\themes\default\textbox.css" />
+    <Content Include="css\themes\default\tooltip.css" />
+    <Content Include="css\themes\default\tree.css" />
+    <Content Include="css\themes\default\validatebox.css" />
+    <Content Include="css\themes\default\window.css" />
+    <Content Include="css\themes\gray\accordion.css" />
+    <Content Include="css\themes\gray\calendar.css" />
+    <Content Include="css\themes\gray\combo.css" />
+    <Content Include="css\themes\gray\combobox.css" />
+    <Content Include="css\themes\gray\datagrid.css" />
+    <Content Include="css\themes\gray\datebox.css" />
+    <Content Include="css\themes\gray\dialog.css" />
+    <Content Include="css\themes\gray\easyui.css" />
+    <Content Include="css\themes\gray\images\accordion_arrows.png" />
+    <Content Include="css\themes\gray\images\blank.gif" />
+    <Content Include="css\themes\gray\images\calendar_arrows.png" />
+    <Content Include="css\themes\gray\images\combo_arrow.png" />
+    <Content Include="css\themes\gray\images\datagrid_icons.png" />
+    <Content Include="css\themes\gray\images\datebox_arrow.png" />
+    <Content Include="css\themes\gray\images\layout_arrows.png" />
+    <Content Include="css\themes\gray\images\linkbutton_bg.png" />
+    <Content Include="css\themes\gray\images\loading.gif" />
+    <Content Include="css\themes\gray\images\menu_arrows.png" />
+    <Content Include="css\themes\gray\images\messager_icons.png" />
+    <Content Include="css\themes\gray\images\pagination_icons.png" />
+    <Content Include="css\themes\gray\images\panel_tools.png" />
+    <Content Include="css\themes\gray\images\searchbox_button.png" />
+    <Content Include="css\themes\gray\images\slider_handle.png" />
+    <Content Include="css\themes\gray\images\spinner_arrows.png" />
+    <Content Include="css\themes\gray\images\tabs_icons.png" />
+    <Content Include="css\themes\gray\images\tree_icons.png" />
+    <Content Include="css\themes\gray\images\validatebox_warning.png" />
+    <Content Include="css\themes\gray\layout.css" />
+    <Content Include="css\themes\gray\linkbutton.css" />
+    <Content Include="css\themes\gray\menu.css" />
+    <Content Include="css\themes\gray\menubutton.css" />
+    <Content Include="css\themes\gray\messager.css" />
+    <Content Include="css\themes\gray\numberbox.css" />
+    <Content Include="css\themes\gray\pagination.css" />
+    <Content Include="css\themes\gray\panel.css" />
+    <Content Include="css\themes\gray\progressbar.css" />
+    <Content Include="css\themes\gray\propertygrid.css" />
+    <Content Include="css\themes\gray\searchbox.css" />
+    <Content Include="css\themes\gray\slider.css" />
+    <Content Include="css\themes\gray\spinner.css" />
+    <Content Include="css\themes\gray\splitbutton.css" />
+    <Content Include="css\themes\gray\tabs.css" />
+    <Content Include="css\themes\gray\textbox.css" />
+    <Content Include="css\themes\gray\tooltip.css" />
+    <Content Include="css\themes\gray\tree.css" />
+    <Content Include="css\themes\gray\validatebox.css" />
+    <Content Include="css\themes\gray\window.css" />
+    <Content Include="css\themes\icon.css" />
+    <Content Include="css\themes\icons\back.png" />
+    <Content Include="css\themes\icons\blank.gif" />
+    <Content Include="css\themes\icons\cancel.png" />
+    <Content Include="css\themes\icons\cut.png" />
+    <Content Include="css\themes\icons\edit_add.png" />
+    <Content Include="css\themes\icons\edit_remove.png" />
+    <Content Include="css\themes\icons\filesave.png" />
+    <Content Include="css\themes\icons\filter.png" />
+    <Content Include="css\themes\icons\help.png" />
+    <Content Include="css\themes\icons\large_chart.png" />
+    <Content Include="css\themes\icons\large_clipart.png" />
+    <Content Include="css\themes\icons\large_picture.png" />
+    <Content Include="css\themes\icons\large_shapes.png" />
+    <Content Include="css\themes\icons\large_smartart.png" />
+    <Content Include="css\themes\icons\mini_add.png" />
+    <Content Include="css\themes\icons\mini_edit.png" />
+    <Content Include="css\themes\icons\mini_refresh.png" />
+    <Content Include="css\themes\icons\no.png" />
+    <Content Include="css\themes\icons\ok.png" />
+    <Content Include="css\themes\icons\pencil.png" />
+    <Content Include="css\themes\icons\print.png" />
+    <Content Include="css\themes\icons\redo.png" />
+    <Content Include="css\themes\icons\reload.png" />
+    <Content Include="css\themes\icons\search.png" />
+    <Content Include="css\themes\icons\sum.png" />
+    <Content Include="css\themes\icons\tip.png" />
+    <Content Include="css\themes\icons\undo.png" />
+    <Content Include="css\themes\metro\accordion.css" />
+    <Content Include="css\themes\metro\calendar.css" />
+    <Content Include="css\themes\metro\combo.css" />
+    <Content Include="css\themes\metro\combobox.css" />
+    <Content Include="css\themes\metro\datagrid.css" />
+    <Content Include="css\themes\metro\datebox.css" />
+    <Content Include="css\themes\metro\dialog.css" />
+    <Content Include="css\themes\metro\easyui.css" />
+    <Content Include="css\themes\metro\images\accordion_arrows.png" />
+    <Content Include="css\themes\metro\images\blank.gif" />
+    <Content Include="css\themes\metro\images\calendar_arrows.png" />
+    <Content Include="css\themes\metro\images\combo_arrow.png" />
+    <Content Include="css\themes\metro\images\datagrid_icons.png" />
+    <Content Include="css\themes\metro\images\datebox_arrow.png" />
+    <Content Include="css\themes\metro\images\layout_arrows.png" />
+    <Content Include="css\themes\metro\images\linkbutton_bg.png" />
+    <Content Include="css\themes\metro\images\loading.gif" />
+    <Content Include="css\themes\metro\images\menu_arrows.png" />
+    <Content Include="css\themes\metro\images\messager_icons.png" />
+    <Content Include="css\themes\metro\images\pagination_icons.png" />
+    <Content Include="css\themes\metro\images\panel_tools.png" />
+    <Content Include="css\themes\metro\images\searchbox_button.png" />
+    <Content Include="css\themes\metro\images\slider_handle.png" />
+    <Content Include="css\themes\metro\images\spinner_arrows.png" />
+    <Content Include="css\themes\metro\images\tabs_icons.png" />
+    <Content Include="css\themes\metro\images\tree_icons.png" />
+    <Content Include="css\themes\metro\images\validatebox_warning.png" />
+    <Content Include="css\themes\metro\layout.css" />
+    <Content Include="css\themes\metro\linkbutton.css" />
+    <Content Include="css\themes\metro\menu.css" />
+    <Content Include="css\themes\metro\menubutton.css" />
+    <Content Include="css\themes\metro\messager.css" />
+    <Content Include="css\themes\metro\numberbox.css" />
+    <Content Include="css\themes\metro\pagination.css" />
+    <Content Include="css\themes\metro\panel.css" />
+    <Content Include="css\themes\metro\progressbar.css" />
+    <Content Include="css\themes\metro\propertygrid.css" />
+    <Content Include="css\themes\metro\searchbox.css" />
+    <Content Include="css\themes\metro\slider.css" />
+    <Content Include="css\themes\metro\spinner.css" />
+    <Content Include="css\themes\metro\splitbutton.css" />
+    <Content Include="css\themes\metro\tabs.css" />
+    <Content Include="css\themes\metro\textbox.css" />
+    <Content Include="css\themes\metro\tooltip.css" />
+    <Content Include="css\themes\metro\tree.css" />
+    <Content Include="css\themes\metro\validatebox.css" />
+    <Content Include="css\themes\metro\window.css" />
+    <Content Include="Edit.html" />
+    <Content Include="FileNotFound.html" />
+    <Content Include="Global.asax" />
+    <Content Include="ImagePath\yw404.jpg" />
+    <Content Include="MyErrorPage.html" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\easyui-lang-zh_CN.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.easyui.min.js" />
+    <Content Include="ShowDetails.html" />
+    <Content Include="UserInfoList.ashx" />
+    <Content Include="ShowDetails.ashx" />
+    <Content Include="Edit.ashx" />
+    <Content Include="ProcessEdit.ashx" />
+    <Content Include="Delete.ashx" />
+    <Content Include="2017_9_18\FileUpload.ashx" />
+    <Content Include="2017_9_18\ImageCreater.ashx" />
+    <Content Include="2017_9_18\ImageThumb.ashx" />
+    <Content Include="2017_9_18\ValidationCode.ashx" />
+    <Content Include="2017_9_18\Download.ashx" />
+    <Content Include="2017_9_18\aspxCRUD\Delete.ashx" />
+    <Content Include="2017_10_01\02_Validation.ashx" />
+    <Content Include="2017_10_01\04_Logout.ashx" />
+    <Content Include="2017_10_01\06_Ajax_Get.ashx" />
+    <Content Include="2017_10_03\02_GetDate.ashx" />
+    <Content Include="2017_10_03\03_CheckUserName.ashx" />
+    <Content Include="2017_10_03\04_CheckUserState.ashx" />
+    <Content Include="2017_10_03\05_GetJson.ashx" />
+    <Content Include="2017_10_03\06_List.ashx" />
+    <Content Include="2017_10_03\06_Detail.ashx" />
+    <Content Include="2017_10_03\06_AddUserInfo.ashx" />
+    <Content Include="2017_10_03\06_DeleteUserInfo.ashx" />
+    <Content Include="2017_10_03\06_EditUserInfo.ashx" />
+    <Content Include="2017_10_06\01_Master.Master" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile1.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\jquery-1.8.3.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.3.js" />
+    <Content Include="Scripts\jquery-1.8.3.min.js" />
+    <Content Include="UserInfoList.html" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="2017_10_01\01_Login.aspx.cs">
+      <DependentUpon>01_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_01\01_Login.aspx.designer.cs">
+      <DependentUpon>01_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_01\02_Validation.ashx.cs">
+      <DependentUpon>02_Validation.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_01\03_AdminIndex.aspx.cs">
+      <DependentUpon>03_AdminIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_01\03_AdminIndex.aspx.designer.cs">
+      <DependentUpon>03_AdminIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_01\04_Logout.ashx.cs">
+      <DependentUpon>04_Logout.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_01\05_Ajax_Demo.aspx.cs">
+      <DependentUpon>05_Ajax_Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_01\05_Ajax_Demo.aspx.designer.cs">
+      <DependentUpon>05_Ajax_Demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_01\06_Ajax_Get.ashx.cs">
+      <DependentUpon>06_Ajax_Get.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_01\07_Ajax_Post.aspx.cs">
+      <DependentUpon>07_Ajax_Post.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_01\07_Ajax_Post.aspx.designer.cs">
+      <DependentUpon>07_Ajax_Post.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_01\08_AjaxDemo_Get.aspx.cs">
+      <DependentUpon>08_AjaxDemo_Get.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_01\08_AjaxDemo_Get.aspx.designer.cs">
+      <DependentUpon>08_AjaxDemo_Get.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_01\09_Ajax_JQuery.aspx.cs">
+      <DependentUpon>09_Ajax_JQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_01\09_Ajax_JQuery.aspx.designer.cs">
+      <DependentUpon>09_Ajax_JQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_03\01_AjaxJqueryDemo.aspx.cs">
+      <DependentUpon>01_AjaxJqueryDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_03\01_AjaxJqueryDemo.aspx.designer.cs">
+      <DependentUpon>01_AjaxJqueryDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_03\02_GetDate.ashx.cs">
+      <DependentUpon>02_GetDate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_03\03_CheckUserName.ashx.cs">
+      <DependentUpon>03_CheckUserName.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_03\03_Register.aspx.cs">
+      <DependentUpon>03_Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_03\03_Register.aspx.designer.cs">
+      <DependentUpon>03_Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_03\04_CheckUserState.ashx.cs">
+      <DependentUpon>04_CheckUserState.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_03\04_Login.aspx.cs">
+      <DependentUpon>04_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_03\04_Login.aspx.designer.cs">
+      <DependentUpon>04_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_03\05_GetJson.ashx.cs">
+      <DependentUpon>05_GetJson.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_03\05_JsonDemo.aspx.cs">
+      <DependentUpon>05_JsonDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_03\05_JsonDemo.aspx.designer.cs">
+      <DependentUpon>05_JsonDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_03\06_AddUserInfo.ashx.cs">
+      <DependentUpon>06_AddUserInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_03\06_DeleteUserInfo.ashx.cs">
+      <DependentUpon>06_DeleteUserInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_03\06_Detail.ashx.cs">
+      <DependentUpon>06_Detail.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_03\06_EditUserInfo.ashx.cs">
+      <DependentUpon>06_EditUserInfo.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_03\06_List.ashx.cs">
+      <DependentUpon>06_List.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_05\00_ServerControlDemo.aspx.cs">
+      <DependentUpon>00_ServerControlDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_05\00_ServerControlDemo.aspx.designer.cs">
+      <DependentUpon>00_ServerControlDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_05\01_Repeater.aspx.cs">
+      <DependentUpon>01_Repeater.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_05\01_Repeater.aspx.designer.cs">
+      <DependentUpon>01_Repeater.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_05\02_ListView.aspx.cs">
+      <DependentUpon>02_ListView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_05\02_ListView.aspx.designer.cs">
+      <DependentUpon>02_ListView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_06\01_Index.aspx.cs">
+      <DependentUpon>01_Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\01_Index.aspx.designer.cs">
+      <DependentUpon>01_Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_06\01_Master.Master.cs">
+      <DependentUpon>01_Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\01_Master.Master.designer.cs">
+      <DependentUpon>01_Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_06\01_MasterIndex.aspx.cs">
+      <DependentUpon>01_MasterIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\01_MasterIndex.aspx.designer.cs">
+      <DependentUpon>01_MasterIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_06\02_CustomCacheDemo.aspx.cs">
+      <DependentUpon>02_CustomCacheDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\02_CustomCacheDemo.aspx.designer.cs">
+      <DependentUpon>02_CustomCacheDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_06\02_DataSrcCache.aspx.cs">
+      <DependentUpon>02_DataSrcCache.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\02_DataSrcCache.aspx.designer.cs">
+      <DependentUpon>02_DataSrcCache.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_06\02_PageCacheDemo.aspx.cs">
+      <DependentUpon>02_PageCacheDemo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\02_PageCacheDemo.aspx.designer.cs">
+      <DependentUpon>02_PageCacheDemo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_06\03_FileSystemDependency.aspx.cs">
+      <DependentUpon>03_FileSystemDependency.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\03_FileSystemDependency.aspx.designer.cs">
+      <DependentUpon>03_FileSystemDependency.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_06\04_Error.aspx.cs">
+      <DependentUpon>04_Error.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\04_Error.aspx.designer.cs">
+      <DependentUpon>04_Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_06\05_Login.aspx.cs">
+      <DependentUpon>05_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\05_Login.aspx.designer.cs">
+      <DependentUpon>05_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_10_06\Admin\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_10_06\Admin\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_18\aspxCRUD\Add.aspx.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_18\aspxCRUD\Add.aspx.designer.cs">
+      <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_18\aspxCRUD\Delete.ashx.cs">
+      <DependentUpon>Delete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_18\aspxCRUD\Details.aspx.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_18\aspxCRUD\Details.aspx.designer.cs">
+      <DependentUpon>Details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_18\aspxCRUD\Edit.aspx.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_18\aspxCRUD\Edit.aspx.designer.cs">
+      <DependentUpon>Edit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_18\aspxCRUD\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_18\aspxCRUD\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_18\Download.ashx.cs">
+      <DependentUpon>Download.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_18\FileUpload.ashx.cs">
+      <DependentUpon>FileUpload.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_18\ImageCreater.ashx.cs">
+      <DependentUpon>ImageCreater.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_18\ImageThumb.ashx.cs">
+      <DependentUpon>ImageThumb.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_18\ValidationCode.ashx.cs">
+      <DependentUpon>ValidationCode.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_24\NewList.aspx.cs">
+      <DependentUpon>NewList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_24\NewList.aspx.designer.cs">
+      <DependentUpon>NewList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_24\Server\Server_Demo.aspx.cs">
+      <DependentUpon>Server_Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_24\Server\Server_Demo.aspx.designer.cs">
+      <DependentUpon>Server_Demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_24\Server\Server_Demo2.aspx.cs">
+      <DependentUpon>Server_Demo2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_24\Server\Server_Demo2.aspx.designer.cs">
+      <DependentUpon>Server_Demo2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_24\UrlReferrer\ShowImage.ashx.cs">
+      <DependentUpon>ShowImage.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_24\UrlReferrer\UrlReferrerHanlder.ashx.cs">
+      <DependentUpon>UrlReferrerHanlder.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_24\ViewState\ViewState_Demo.aspx.cs">
+      <DependentUpon>ViewState_Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_24\ViewState\ViewState_Demo.aspx.designer.cs">
+      <DependentUpon>ViewState_Demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_24\ViewState\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_24\ViewState\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_26\01_CookieDemo_1.aspx.cs">
+      <DependentUpon>01_CookieDemo_1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_26\01_CookieDemo_1.aspx.designer.cs">
+      <DependentUpon>01_CookieDemo_1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_26\01_CookieDemo_2.aspx.cs">
+      <DependentUpon>01_CookieDemo_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_26\01_CookieDemo_2.aspx.designer.cs">
+      <DependentUpon>01_CookieDemo_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_26\03_CookieLogin.aspx.cs">
+      <DependentUpon>03_CookieLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_26\03_CookieLogin.aspx.designer.cs">
+      <DependentUpon>03_CookieLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_26\02_Login.aspx.cs">
+      <DependentUpon>02_Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_26\02_Login.aspx.designer.cs">
+      <DependentUpon>02_Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_26\04_Test.aspx.cs">
+      <DependentUpon>04_Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_26\04_Test.aspx.designer.cs">
+      <DependentUpon>04_Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="2017_9_26\Session_Demo.aspx.cs">
+      <DependentUpon>Session_Demo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="2017_9_26\Session_Demo.aspx.designer.cs">
+      <DependentUpon>Session_Demo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Delete.ashx.cs">
+      <DependentUpon>Delete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Edit.ashx.cs">
+      <DependentUpon>Edit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ProcessEdit.ashx.cs">
+      <DependentUpon>ProcessEdit.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowDetails.ashx.cs">
+      <DependentUpon>ShowDetails.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfoList.ashx.cs">
+      <DependentUpon>UserInfoList.ashx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Itcaster.Web.BLL\Itcaster.Web.BLL.csproj">
+      <Project>{68f55449-0815-486c-80b2-d44bde48ae34}</Project>
+      <Name>Itcaster.Web.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itcaster.Web.Common\Itcaster.Web.Common.csproj">
+      <Project>{f8ec6c81-7157-4104-bcd3-d8035bd72a4e}</Project>
+      <Name>Itcaster.Web.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Itcaster.Web.Model\Itcaster.Web.Model.csproj">
+      <Project>{23c9c900-6437-4c85-a37e-93538c7bd3c9}</Project>
+      <Name>Itcaster.Web.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49965</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:49557/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

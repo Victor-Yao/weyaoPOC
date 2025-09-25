@@ -1,0 +1,31 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+       @*@foreach (var userInfo in ViewBag.List)
+       {
+           @userInfo.ID;
+       }*@
+
+        @*@foreach (var userInfo in ViewBag.List1)
+        {
+            @userInfo.ID;
+        }*@
+
+        @foreach (var newsInfo in ViewBag.List2)
+        {
+            @newsInfo.NewsType.tid;
+        }
+    </div>
+</body>
+</html>
